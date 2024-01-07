@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'sansserifexbflf-italic';
+  src: url('./font/sansserifexbflf-italic.otf');
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat';
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+ion-icon {
+  font-size: 25px;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  padding: 0 30px;
+  font-size: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu{
+  cursor: pointer;
+}
+.navbar .icon{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navbar .icon .search{
+  cursor: pointer;
+}
+.navbar .icon .cart{
+  cursor: pointer;
+}
+.logo {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.profile img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: 1s all cubic-bezier(.87, .76, .33, .98);
+  overflow: hidden;
+}
+.split.left {
+  left: 0;
+  background: #0192cc;
+}
+.split.right {
+  right: 0;
+  background: #FFA100;
+}
+.hover-left .split.left {
+  width: 60%;
+}
+.hover-left .split.right {
+  width: 40%;
+}
+.hover-right .split.right {
+  width: 60%;
+}
+.hover-right .split.left {
+  width: 40%;
+}
+.skateboard {
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shoes {
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text {
+  width: 600px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s cubic-bezier(.87, .76, .33, .98);
+}
+.text .subtitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.text .title {
+  font-size: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'sansserifexbflf-italic';
+  line-height: 1;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+.text .desc {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  margin: 10px 0 30px 0;
+  text-align: center;
+}
+.text .button {
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  border: #fff solid 2px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50px;
+  transition: .5s;
+}
+.text .button:hover{
+  background: #fff;
+  color: #000;
+}
+.hover-left .split.left .text {
+  transform: translate(-40%, -50%);
+}
+.hover-left .split.right .text {
+  transform: translate(-40%, -50%);
+}
+.hover-right .split.right .text {
+  transform: translate(-60%, -50%);
+}
+.hover-right .split.left .text {
+  transform: translate(-45%, -50%);
+}
+.slider {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.pages {
+  padding: 0 20px;
+  font-weight: bold;
+}
+.pages span::after {
+  content: "";
+  display: inline-block;
+  border: .5px solid #fff;
+  width: 100px;
+  margin: 0 10px;
+  transform: translateY(-4px);
+}
+.arrows {
+  padding: 0 20px;
+}
+.arrows ion-icon {
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+
+
+@media(max-width:767px){
+  .text{
+    text-align: center;
+    font-size: 16px;
+  }
+  .text .title{
+    font-size: 21px;
+  }
+  .text .desc{
+
+  }
+}
